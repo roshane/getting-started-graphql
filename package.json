@@ -1,0 +1,22 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "learning node development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "author": "roshanemadusanka@gmail.com",
+  "license": "ISC",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "dependencies": {
+    "babel": "^6.3.26",
+    "browserify": "^12.0.1",
+    "express": "^4.13.3"
+  }
+}
