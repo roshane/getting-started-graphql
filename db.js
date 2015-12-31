@@ -54,25 +54,25 @@ User.hasMany(Comment);
 Comment.belongsTo(User);
 
 
-conn.sync({force: true}).then(()=> {
-  // Table created
-  ld.times(10,function(){
-  	return User.create({
-  		firstName: Faker.name.firstName(),
-  		lastName: Faker.name.lastName(),
-  		age: Faker.random.number()%100
-  	});
+// conn.sync({force: false}).then(()=> {
+//   // Table created
+//   ld.times(10,function(){
+//   	return User.create({
+//   		firstName: Faker.name.firstName(),
+//   		lastName: Faker.name.lastName(),
+//   		age: Faker.random.number()%100
+//   	});
 
-  });
-});
+//   });
+// });
 
-conn.sync({force:true}).then(()=>{
-	ld.times(10,function(){
-		return Comment.create({
-			comment:Faker.lorem.paragraph(),
-			userId:Faker.random.number()%10
-		})
-	});
-});
+// conn.sync({force:false}).then(()=>{
+// 	ld.times(10,function(){
+// 		return Comment.create({
+// 			comment:Faker.lorem.paragraph(),
+// 			userId:Faker.random.number()%10
+// 		})
+// 	});
+// });
 
-  export default conn;
+export default conn;
